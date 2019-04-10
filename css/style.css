@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans');
+
+
+/* Variables */ 
+:root {
+  --main-color: #6c5ce7;
+}
+
+
+/* General styles */
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+p {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 6rem;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+
+/* Reusable */
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.mb {
+  margin-bottom: 3rem;
+}
+
+.mt {
+  margin-top: 5rem;
+}
+
+input[type="email"]:focus {
+  outline:none;
+}
+
+
+/* Navbar */
+.navbar {
+  font-size: 1.8rem;
+}
+
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+.nav-links,
+.logo {
+  text-decoration: none;
+  color: #000;
+}
+
+.main-nav li{
+  text-align: center;
+  margin: 1.5rem auto;
+}
+
+.logo {
+  font-family: 'Abril Fatface', cursive;
+  display: inline-block;
+  font-size: 2.4rem;
+  font-weight: 300;
+  margin-top: 1rem;
+  padding-left: 3.5rem;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 2.4rem;
+}
+
+.active {
+  display: block;
+}
+
+
+/* Hero */
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15rem;
+}
+
+.hero-img {
+  width: 55rem;
+  padding-top: 7rem;
+}
+
+.hero-heading {
+  text-align: center;
+  animation: typing 3.5s steps(40, end),
+  blink-caret 1s step-end infinite;
+}
+
+.subscribe-section {
+  display: flex;
+}
+
+.email {
+  height: 4rem;
+  border-radius: 0.8rem 0 0 0.8rem;
+  text-align: center;
+  font-size: 1.5rem;
+  box-shadow: none;
+  border: 1px solid #b2bec3 ;
+  min-width: 30rem;
+  border-right: none;
+}
+
+.socialmedia-icons {
+  display: flex;
+  flex-direction: row;
+}
+
+.socialmedia-heading {
+  margin-bottom: 2.5rem;
+}
+
+.socialmedia-icons i {
+  margin: 1.5rem 2.5rem;
+  font-size: 4rem;
+  color: #000;
+  transition: 0.7s;
+}
+
+.socialmedia-icons i:hover {
+  color: var(--main-color);
+}
+
+.subscribe-btn {
+  padding: 0.5rem;
+  height: 4rem;
+  text-align: center;
+  font-size: 1.5rem;
+  border-radius: 0 0.8rem 0.8rem 0;
+  color: #fff;
+  background-color: var(--main-color);
+  border: none;
+  min-width: 10rem;
+  cursor: pointer;
+}
+
+
+/* About & Services */
+#services {
+  background: linear-gradient(180deg,#fafbfc 0,#fff 36px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.services-description {
+  width: 60rem;
+  margin-bottom: 10rem;
+}
+
+.attention {
+  color: #8E2DE2;  /* fallback for old browsers */
+  color: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+  color: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.services-text {
+  line-height: 3.2rem;
+}
+
+.service-items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.each-service {
+  width: 50%;
+  margin: 0 auto 10rem auto;
+  align-self: flex-start;
+  
+}
+
+.service-img {
+  margin: 0 auto;
+  transition:all 0.5s ease;
+}
+
+.service-img img {
+  width: 30rem;  
+  height: 20rem;
+}
+
+.service-img:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.service-description {
+  padding: 0 8rem;
+}
+
+
+/* Sign up */
+#signup {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15rem;
+  justify-content: space-around;
+  background: var(--main-color);
+}
+
+.signup-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  max-width: 50%;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.signup-description p {
+  font-size: 1.8rem;
+}
+
+.signup-img {
+  width: 50%;
+  padding: 5rem;
+}
+
+.signup-heading {
+  padding: 2rem;
+  text-align: center;
+}
+
+.signup-btn {
+  padding: .8rem;
+  text-align: center;
+  font-size: 1.9rem;
+  background-color: #fdcb6e;
+  border: none;
+  min-width: 20rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+
+/* Footer */
+#footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#footer h5 {
+  margin-bottom: 2.5rem;
+}
+
+.copyright {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.copyright-text {
+  font-size: 1.4rem; 
+  text-align: center;
+}
+
+.links {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.links a {
+  color:#2d3436;
+  font-size: 1.4rem;
+  text-decoration: none;
+  margin: 0.3rem 0;
+}
+
+.social-links {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icons i{
+  margin: 0.5rem;
+  font-size: 2.5rem;
+  color: #2d3436;  
+}
+
+.social-links i:hover {
+  color: var(--main-color);
+}
+
+
+/* Media queries */
+
+@media (max-width: 415px) { 
+  .container {
+    width: 100vw;
+  }
+
+  section {
+    padding: 0 1rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.7rem;
+  }
+
+  .mb {
+    margin-bottom: 1.5rem;
+  }
+
+  .mt {
+    margin-top: 2.5rem;
+  }
+
+  .navbar-toggle {
+    top: 10px;
+  }
+
+  .nav-links {
+    font-size: 1.4rem;  
+  }
+
+  .hero-img {
+    max-width: 20rem;
+  }
+
+  .email {
+    height: 2rem;
+    min-width: 12rem;
+    font-size: 1.1rem;
+  }
+
+  .subscribe-btn {
+    height: 2rem;
+    min-width: 6rem;
+    padding: 0;
+    font-size: 1.1rem;
+  }
+
+  .services-description {
+    width: 100%;
+  }
+  
+
+  .socialmedia-icons i {
+    font-size: 2.5rem;  
+  }
+
+  .service-description {
+    display: none;
+  }
+
+  .service-img img {
+    width: 25rem;
+    height: 15rem;
+  }
+
+  .each-service {
+    margin-bottom: 4rem;
+  }
+
+  #signup {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .signup-description p {
+    font-size: 1.4rem;
+  }
+
+  .signup-img {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .signup-description {
+    max-width: 100%;  
+  }
+
+  .signup-btn {
+    font-size: 1.3rem;
+    min-width: 14rem;
+  }
+
+  #footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #footer .copyright {
+    width: 100%;
+  }
+
+  #footer .social-links {
+    width: 100%;
+  }
+
+  #footer .links {
+    display: none;
+  }
+
+  #footer .social-links h5 {
+    display: none;
+  }
+}
+
+
+@media (max-width: 576px) {
+  section {
+    padding: 0 1.5rem;
+  } 
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h4 {
+    font-size: 1.9rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  .mb {
+    margin-bottom: 1.5rem;
+  }
+
+  .mt {
+    margin-top: 3rem;
+  }
+  
+  .navbar-toggle {
+    top: 10px;
+  }
+
+  #hero {
+    margin-bottom: 4rem;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-img {
+    width: 35 rem;
+  }
+
+  .services-description {
+    width: 100%;
+  }
+
+  #signup {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .signup-img {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .signup-description {
+    max-width: 100%;  
+  }
+
+  .signup-btn {
+    font-size: 1.5rem;
+    min-width: 18rem;
+  }
+
+  #footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #footer .copyright {
+    width: 100%;
+  }
+
+  #footer .social-links {
+    width: 100%;
+  }
+
+  #footer .links {
+    display: none;
+  }
+
+  #footer .social-links h5 {
+    display: none;
+  }
+
+ }
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
+  }
+  
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  
+  .main-nav li {
+    margin: 0;
+  }
+
+  .nav-links {
+    margin-left: 40px;
+  }
+
+  .logo {
+    margin-top: 0;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .nav-links:hover {
+    color: var(--main-color);
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  section {
+    padding: 0 4rem;
+  }
+  .logo {
+    font-size: 2rem;
+  }
+  .each-service {
+    width: 100%;
+  }
+
+  #footer {
+    padding: 0 2rem;
+  }
+
+}
+
+
+@media (min-width: 992px) { 
+
+}
+
+@media (min-width: 1200px) { 
+
+}

@@ -25,6 +25,10 @@ body {
   height: 100%;
 }
 
+section {
+  padding: 0 1rem;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -56,7 +60,7 @@ h5 {
 
 /* Reusable */
 .container {
-  width: 100%;
+  width: 100vw;
   height: 100%;
   margin: 0 auto;
   position: relative;
@@ -82,7 +86,9 @@ input[type="email"]:focus {
 
 .main-nav {
   list-style-type: none;
-  display: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .nav-links,
@@ -103,16 +109,9 @@ input[type="email"]:focus {
   font-weight: 300;
   margin-top: 1rem;
   padding-left: 3.5rem;
+  text-align: center;
 }
 
-.navbar-toggle {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  cursor: pointer;
-  color: rgba(0, 0, 0, 0.7);
-  font-size: 2.4rem;
-}
 
 .active {
   display: block;
@@ -249,9 +248,9 @@ input[type="email"]:focus {
 /* Sign up */
 #signup {
   display: flex;
-  flex-direction: row;
-  margin-bottom: 15rem;
-  justify-content: space-around;
+  flex-direction: column;
+  margin-bottom: 10rem;
+  align-items: center;
   background: var(--main-color);
 }
 
@@ -260,7 +259,6 @@ input[type="email"]:focus {
   flex-direction: column;
   align-items: center;
   color: #fff;
-  max-width: 50%;
   justify-content: center;
   padding: 2rem;
 }
@@ -270,8 +268,8 @@ input[type="email"]:focus {
 }
 
 .signup-img {
-  width: 50%;
-  padding: 5rem;
+  width: 75%;
+  padding: 3rem 0;
 }
 
 .signup-heading {
@@ -348,24 +346,16 @@ input[type="email"]:focus {
   color: var(--main-color);
 }
 
-
 /* Media queries */
 
-@media (max-width: 415px) { 
-  .container {
-    width: 100vw;
-  }
-
-  section {
-    padding: 0 1rem;
-  }
+@media screen and (max-width: 415px) { 
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 1.9rem;
   }
 
   h3 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   h4 {
@@ -373,7 +363,7 @@ input[type="email"]:focus {
   }
 
   p {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
   }
 
   .mb {
@@ -382,10 +372,6 @@ input[type="email"]:focus {
 
   .mt {
     margin-top: 2.5rem;
-  }
-
-  .navbar-toggle {
-    top: 10px;
   }
 
   .nav-links {
@@ -397,13 +383,13 @@ input[type="email"]:focus {
   }
 
   .email {
-    height: 2rem;
-    min-width: 12rem;
+    height: 3.2rem;
+    min-width: 18rem;
     font-size: 1.1rem;
   }
 
   .subscribe-btn {
-    height: 2rem;
+    height: 3.2rem;
     min-width: 6rem;
     padding: 0;
     font-size: 1.1rem;
@@ -442,7 +428,6 @@ input[type="email"]:focus {
   }
 
   .signup-img {
-    width: 100%;
     padding: 2rem;
   }
 
@@ -484,15 +469,15 @@ input[type="email"]:focus {
   } 
 
   h2 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   h4 {
-    font-size: 1.9rem;
+    font-size: 2rem;
   }
 
   p {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .mb {
@@ -503,9 +488,6 @@ input[type="email"]:focus {
     margin-top: 3rem;
   }
   
-  .navbar-toggle {
-    top: 10px;
-  }
 
   #hero {
     margin-bottom: 4rem;
@@ -530,7 +512,6 @@ input[type="email"]:focus {
   }
 
   .signup-img {
-    width: 100%;
     padding: 2rem;
   }
 
@@ -594,10 +575,6 @@ input[type="email"]:focus {
     margin-top: 0;
   }
 
-  .navbar-toggle {
-    display: none;
-  }
-
   .nav-links:hover {
     color: var(--main-color);
   }
@@ -605,15 +582,21 @@ input[type="email"]:focus {
 
 
 @media screen and (max-width: 768px) {
+
   section {
     padding: 0 4rem;
   }
+
   .logo {
     font-size: 2rem;
+    display: flex;
+    justify-content: center;
   }
+
   .each-service {
     width: 100%;
   }
+
 
   #footer {
     padding: 0 2rem;
@@ -621,11 +604,15 @@ input[type="email"]:focus {
 
 }
 
+@media (min-width: 1024px) { 
+  #signup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
-@media (min-width: 992px) { 
-
+  .signup-img {
+    width: 100%;
+    padding: 5rem;
 }
-
-@media (min-width: 1200px) { 
-
 }

@@ -1,6 +1,16 @@
-let mainNav = document.getElementById("js-menu");
-let navBarToggle = document.getElementById("js-navbar-toggle");
+$(document).ready(function () {
 
-navBarToggle.addEventListener("click", function() {
-  mainNav.classList.toggle("active");
+  $('nav a[href*="#"]').on('click', function () {
+    $('html, body').animate({
+      scrollTop: $($(this).attr('href')).offset().top - 100
+    }, 2000)
+  });
+
+
+AOS.init({
+  easing: 'ease',
+  duration: 1800,
+  once: true
+});
+
 });
